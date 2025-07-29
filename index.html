@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel</title>
+    <link rel="stylesheet" href="uneversalstyle.css">
+</head>
+<body>
+    <div class="nav">
+        <nav>
+            <ul>
+                <li><a class="item" href="about.html">About Us</a></li>
+                <li><a class="item" href="#login">Login</a></li>
+                <li><a class="item" href="#signup">Signup</a></li>
+                <li><a class="item" href="#dance">Dance Party</a></li>
+            </ul>
+        </nav>
+    </div>
+    <h1>Image Carousel</h1>
+    <div class="carousel-container">
+        <img class="myslides" src="https://m.media-amazon.com/images/I/51DBd7O6GEL._SL1500_.jpg" alt="Image 1">
+        <img class="myslides" src="https://snworksceo.imgix.net/cds/58b1e522-dc3c-45ca-874d-e127b6fa8470.sized-1000x1000.jpg?w=1000&dpr=2" alt="Image 2">
+        <img class="myslides" src="https://www.telefonica.com/en/wp-content/uploads/sites/5/2023/07/differences-robotis-ia.jpg" alt="Image 3">
+                <img class="myslides" src="https://m.media-amazon.com/images/I/51DBd7O6GEL._SL1500_.jpg" alt="Image 4">
+        <img class="myslides" src="https://snworksceo.imgix.net/cds/58b1e522-dc3c-45ca-874d-e127b6fa8470.sized-1000x1000.jpg?w=1000&dpr=2" alt="Image 2">
+        <img class="myslides" src="https://www.telefonica.com/en/wp-content/uploads/sites/5/2023/07/differences-robotis-ia.jpg" alt="Image 3">
+    </div>
+    <p id="dance" style="text-align: center; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: white; font-weight: bold;">
+        The potato (/pəˈteɪtoʊ/) is a starchy tuberous vegetable native to the Americas that is consumed as a staple food in many parts of the world. Potatoes are underground stem tubers of the plant Solanum tuberosum, a perennial in the nightshade family Solanaceae.
+
+Wild potato species can be found from the southern United States to southern Chile. Genetic studies show that the cultivated potato has a single origin, in the area of present-day southern Peru and extreme northwestern Bolivia. Potatoes were domesticated there about 7,000–10,000 years ago from a species in the S. brevicaule complex. Many varieties of the potato are cultivated in the Andes region of South America, where the species is indigenous.
+<img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Patates.jpg" alt="Potato Image" style="width: 300px; height: auto; display: block; margin: 0 auto;">
+    </p>
+    <script>
+        var index = 0;
+        function carousel(){
+            var i;
+            var x = document.getElementsByClassName("myslides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";  
+            }
+            index++;
+            if (index > x.length) {
+                index = 1;
+            }
+            x[index - 1].style.display = "block";  
+            setTimeout(carousel, 4000);
+        }
+        carousel();
+    </script>
+</body>
+</html>
